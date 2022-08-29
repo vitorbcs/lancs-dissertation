@@ -78,12 +78,12 @@ imba_pipeline = make_pipeline(preprocessor, minority_ros, model)
 
 #Defining the parameter space that the grid search will focus on for the RF model.
 parameters_dict = {
-    'randomforestclassifier__n_estimators': [200], #[50,100,150,200,250,300,350,400],
-    'randomforestclassifier__max_depth': [30], #[None,10,20,30,40,50],
-    'randomforestclassifier__min_samples_split': [2], #=> [2,4,8],
-    'randomforestclassifier__min_samples_leaf': [8], #[1, 2, 4, 8, 12, 16],
-    'randomforestclassifier__max_features': [35], # [10, 25, 35, 50, 100, 200],
-    'randomforestclassifier__class_weight': [{0: 1, 1: 1}],#[{0: 1, 1: 1},{0: 1, 1: 8}, {0: 1, 1: 16}, {0: 1, 1: 24}, {0: 1, 1: 32}],
+    'randomforestclassifier__n_estimators': [50,100,150,200,250,300,350,400],
+    'randomforestclassifier__max_depth': [None,10,20,30,40,50],
+    'randomforestclassifier__min_samples_split': [2,4,8],
+    'randomforestclassifier__min_samples_leaf': [1, 2, 4, 8, 12, 16],
+    'randomforestclassifier__max_features': [10, 25, 35, 50, 100, 200],
+    'randomforestclassifier__class_weight': [{0: 1, 1: 1},{0: 1, 1: 8}, {0: 1, 1: 16}, {0: 1, 1: 24}, {0: 1, 1: 32}],
     'randomforestclassifier__random_state': [0],
     'randomforestclassifier__n_jobs' : [-1]
 }

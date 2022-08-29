@@ -79,12 +79,12 @@ imba_pipeline = make_pipeline(preprocessor, minority_ros, model)
 
 #Defining the parameter space that the grid search will focus on for the XGB model.
 parameters_dict = {
-    'xgbclassifier__n_estimators': [650], #[50, 100, 200, 300, 400, 500, 600, 650, 700], 
-    'xgbclassifier__max_depth': [8],#[6, 7, 8, 9, 10, 12, 14, 16],
-    'xgbclassifier__learning_rate': [0.16], #[0.04, 0.08, 0.12, 0.16, 0.2, 0.3],
-    'xgbclassifier__scale_pos_weight' : [24], #[1, 8, 16, 24, 32], 
-    'xgbclassifier__colsample_bytree': [0.98], #[0.95, 0.98, 1],
-    'xgbclassifier__subsample': [0.98], #[0.95, 0.98, 1],
+    'xgbclassifier__n_estimators': [50, 100, 200, 300, 400, 500, 600, 650, 700], 
+    'xgbclassifier__max_depth': [6, 7, 8, 9, 10, 12, 14, 16],
+    'xgbclassifier__learning_rate': [0.04, 0.08, 0.12, 0.16, 0.2, 0.3],
+    'xgbclassifier__scale_pos_weight' : [1, 8, 16, 24, 32], 
+    'xgbclassifier__colsample_bytree': [0.95, 0.98, 1],
+    'xgbclassifier__subsample': [0.95, 0.98, 1],
     'xgbclassifier__random_state': [0],
     'xgbclassifier__n_jobs' : [-1],
 }
