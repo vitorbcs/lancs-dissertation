@@ -79,8 +79,8 @@ def plot_confusion_matrix(expected_y, predicted_y, title_prefix):
     ax.set_title(title_prefix + ' Confusion Matrix')
 
     #Adding the axis labels.
-    ax.set_xlabel('Predicted Values')
-    ax.set_ylabel('Actual Values ')
+    ax.set_ylabel('Predicted Values')
+    ax.set_xlabel('Actual Values ')
 
     #Adding the true and false labels.
     ax.xaxis.set_ticklabels(['True','False'])
